@@ -11,7 +11,7 @@ app = FastAPI(title="PaanaAI API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://paanaai.vercel.app"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
