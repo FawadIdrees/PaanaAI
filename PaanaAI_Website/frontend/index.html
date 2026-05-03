@@ -751,10 +751,243 @@ nav .nav-link ::selection{background:rgb(74,205,193);color:#041018}
 
 /* ══ MOBILE ══ */
 @media(max-width:768px){
-  .two-col,.role-body,.pass-body{grid-template-columns:1fr}
+  /* ── NAV ── */
+  nav{
+    padding:0 0.6rem;
+    height:50px;
+  }
+  .logo{gap:6px}
+  .logo-mark{
+    width:26px;height:26px;border-radius:6px;
+    font-size:11px;
+  }
+  .logo-text{
+    font-size:0.72rem;
+    letter-spacing:1.8px;
+  }
+  .nav-link{
+    font-size:0.64rem;
+    padding:5px 8px;
+    letter-spacing:0;
+    border-radius:6px;
+  }
+  .nav-right{gap:0}
+
+  /* ── HERO ── */
+  .hero{
+    min-height:auto;
+    padding:3rem 1rem 2rem;
+  }
+  .hero::after{
+    width:90vw;
+    height:180px;
+    bottom:2%;
+  }
+  .hero-h1{
+    font-size:clamp(2rem,11vw,3.5rem);
+    letter-spacing:-1.5px;
+    margin-bottom:1rem;
+  }
+  .hero-sub{
+    font-size:0.64rem;
+    letter-spacing:0.12em;
+    margin-bottom:1.25rem;
+    gap:0.2em 0.1em;
+  }
+  .hero-p{
+    font-size:0.8rem;
+    max-width:100%;
+    margin-bottom:1.5rem;
+    line-height:1.6;
+  }
+  .hero-actions{
+    flex-direction:column;
+    align-items:stretch;
+    width:100%;
+    max-width:320px;
+    gap:8px;
+  }
+  .btn-pill{
+    width:100%;
+    justify-content:center;
+    font-size:0.76rem;
+    padding:10px 18px;
+  }
+  .hero-eyebrow{
+    font-size:0.56rem;
+    letter-spacing:2px;
+    padding:5px 10px;
+    margin-bottom:1.25rem;
+    gap:5px;
+  }
+  .hero-eyebrow .dot{
+    width:5px;height:5px;
+  }
+
+  /* ── HERO STATS ── */
+  .hero-stats{
+    flex-wrap:wrap;
+    margin-top:2rem;
+    border-radius:12px;
+  }
+  .stat{
+    padding:0.9rem 0.6rem;
+    flex:1 1 50%;
+    min-width:120px;
+    border-right:none;
+    border-bottom:1px solid rgba(36,68,83,0.8);
+  }
+  .stat:nth-child(3),
+  .stat:nth-child(4){border-bottom:none}
+  .stat:nth-child(even){border-right:none}
+  .stat-n{font-size:1.2rem}
+  .stat-l{font-size:0.58rem;letter-spacing:0.5px}
+
+  /* ── HERO PITCH ── */
+  .hero-pitch svg{
+    width:min(1100px,150vw);
+  }
+
+  /* ── STRIP / FEATURES ── */
+  .strip{
+    padding:2.5rem 1rem;
+  }
+  .section-head{margin-bottom:2rem}
+  .section-h2{font-size:1.5rem;letter-spacing:-0.8px}
+  .eyebrow-sm{font-size:0.58rem;letter-spacing:2.5px}
+  .two-col{
+    grid-template-columns:1fr;
+    gap:0.9rem;
+  }
+  .feature-block{
+    padding:1.4rem;
+    border-radius:var(--r-lg);
+  }
+  .feat-num{font-size:0.56rem;margin-bottom:1rem}
+  .feat-icon{
+    width:40px;height:40px;border-radius:10px;
+    font-size:9px;margin-bottom:1rem;
+  }
+  .feat-title{font-size:1.1rem}
+  .feat-desc{font-size:0.76rem;line-height:1.6;margin-bottom:1.25rem}
+  .feat-pills{margin-bottom:1.25rem}
+  .pill{font-size:0.62rem;padding:3px 8px}
+  .feat-cta{font-size:0.73rem}
+
+  /* ── PAGE HEADER ── */
+  .ph{
+    padding:1.8rem 1rem 0;
+  }
+  .ph-h1{font-size:1.4rem;letter-spacing:-0.5px}
+  .ph-sub{font-size:0.73rem}
+  .ph-bread{font-size:0.66rem;margin-bottom:1rem}
+  .ph-tag{font-size:0.55rem;letter-spacing:2px;padding:4px 8px}
+
+  /* ── ROLE BODY ── */
+  .role-body{
+    grid-template-columns:1fr;
+    padding:1rem;
+    gap:0.9rem;
+  }
+  .role-grid{grid-template-columns:1fr 1fr;gap:4px}
+  .role-chip{padding:7px 8px}
+  .role-chip-name{font-size:0.65rem}
+
+  /* ── CARDS ── */
+  .card{padding:1.1rem}
+  .card-h{font-size:0.78rem;margin-bottom:1rem}
+  .hm-img{max-height:160px}
+  .hm-caption{font-size:0.64rem;padding:8px 10px}
+  .drop{padding:1.8rem 1rem}
+  .drop-icon{font-size:1.5rem;margin-bottom:0.5rem}
+  .drop-text{font-size:0.72rem}
+  .go-btn{font-size:0.78rem;padding:10px}
+  .result-role-name{font-size:1.4rem}
+  .result-conf-main{font-size:0.72rem}
+  .ci-label{width:100px;font-size:0.64rem}
+  .ci-val{width:28px;font-size:0.6rem}
+  .empty-state{padding:2rem 0.5rem}
+  .empty-state .e-icon{font-size:2rem}
+  .empty-state p{font-size:0.72rem}
+
+  /* ── PASS BODY ── */
+  .pass-body{
+    grid-template-columns:1fr;
+    padding:1rem;
+    gap:0.9rem;
+  }
+  .sidebar{gap:0.7rem}
+  .ctrl-card{padding:1rem}
+  .mode-row{padding:7px 8px;gap:6px}
+  .mode-icon{width:22px;font-size:9px}
+  .mode-name{font-size:0.7rem}
+  .pitch-card{padding:0.9rem;gap:0.7rem}
+  .pitch-hint{font-size:0.6rem;gap:8px}
+  .pitch-outer{padding-bottom:80%}
+  .lgnd{gap:8px}
+  .lgnd-i{font-size:0.58rem}
+  .compute-btn{font-size:0.76rem;padding:11px}
+  .ghost-btn{font-size:0.68rem;padding:8px}
+  .pass-result-card{padding:1rem}
+  .pr-msg{font-size:0.88rem}
+  .pr-sub{font-size:0.64rem}
+  .ir-k{font-size:0.65rem}
+  .ir-v{font-size:0.65rem}
+  .ctrl-label{font-size:0.55rem;letter-spacing:2px;margin-bottom:0.6rem}
+
+  /* ── PAGE TOP PADDING ── */
+  .page{padding-top:50px}
+}
+
+/* ══ EXTRA SMALL PHONES (≤400px) ══ */
+@media(max-width:400px){
+  nav{
+    padding:0 0.4rem;
+    height:44px;
+  }
+  .logo-mark{
+    width:22px;height:22px;
+    font-size:9px;
+    border-radius:5px;
+  }
+  .logo-text{
+    font-size:0.6rem;
+    letter-spacing:1.2px;
+  }
+  .logo{gap:4px}
+  .nav-link{
+    font-size:0.56rem;
+    padding:4px 5px;
+    letter-spacing:0;
+  }
+  .hero-h1{
+    font-size:clamp(1.5rem,10vw,2.2rem);
+    letter-spacing:-1px;
+  }
+  .hero-sub{
+    font-size:0.55rem;
+    letter-spacing:0.08em;
+  }
+  .stat{
+    padding:0.65rem 0.4rem;
+    min-width:100px;
+  }
+  .stat-n{font-size:1rem}
+  .stat-l{font-size:0.5rem}
   .role-grid{grid-template-columns:1fr 1fr}
-  .hero-stats{flex-wrap:wrap}
-  .stat{border-right:none;border-bottom:1px solid rgba(36,68,83,0.8)}
+  .role-chip{padding:5px 6px}
+  .role-chip-name{font-size:0.6rem}
+  .card{padding:0.85rem}
+  .ph{padding:1.4rem 0.7rem 0}
+  .ph-h1{font-size:1.15rem}
+  .ph-sub{font-size:0.66rem}
+  .role-body{padding:0.7rem;gap:0.7rem}
+  .pass-body{padding:0.7rem;gap:0.7rem}
+  .pitch-outer{padding-bottom:95%}
+  .pitch-hint{font-size:0.54rem;gap:4px}
+  .lgnd{gap:4px}
+  .lgnd-i{font-size:0.5rem}
+  .page{padding-top:44px}
 }
 
 @media(prefers-reduced-motion:reduce){
